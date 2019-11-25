@@ -25,18 +25,18 @@
           <span>Try it free 7 days</span> then $20/mo. thereafter</p>
         <form id="signup-form">
           <label class="label"></label>
-          <input class="input-error signup-input" type="text" placeholder="First Name">
+          <input class="signup-input" type="text" id="first-name" placeholder="First Name">
           <p class="warning">First name cannot be empty</p>
           <label class="label"></label>
-          <input class="input-error signup-input" type="text" placeholder="Last Name">
+          <input class="signup-input" type="text" id="last-name" placeholder="Last Name">
           <p class="warning">Last name cannot be empty</p>
           <label class="label"></label>
-          <input class="input-error signup-input" type="email" placeholder="Email Address">
+          <input class="signup-input" type="email" id="email" placeholder="Email Address">
           <p class="warning">Looks like this is not a valid email</p>
           <label class="label"></label>
-          <input class="input-error signup-input" type="password" placeholder="Password">
+          <input class="signup-input" type="password" id="password" placeholder="Password">
           <p class="warning">Password cannot be empty</p>
-          <button id="signup-btn">Claim Your Free Trial</button>
+          <button type="submit" id="signup-btn">Claim Your Free Trial</button>
         </form>
       </div>
     </div>
@@ -48,6 +48,7 @@
       </p>
     </footer>
   </div>
+  <script src="app.js"></script>
 </body>
 
 </html>
