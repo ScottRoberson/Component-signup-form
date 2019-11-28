@@ -1,28 +1,36 @@
-const firstName = document.getElementById('first-name');
-const lastName = document.getElementById('last-name');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const label = document.querySelector('.label');
-const warning = document.querySelector('.warning');
-const warning1 = document.querySelectorAll('.warning');
+const inputs =document.getElementsByTagName('input');
+const label = document.querySelectorAll('.label');
 
 
-const input = document.querySelector('.signup-input');
+const form = document.querySelector('#signup-form');
 
-document.getElementById('signup-form').addEventListener('submit',signupRegister);
 
-function signupRegister(e){
-  if(firstName.value === ''){
-    warning1[1].style.display='flex';
+form.addEventListener('submit',checkForm);
+
+function checkForm(e){
+
+  console.log(label)
+
+  for(input of inputs){
+    input.nextElementSibling.style.display ='none';
+    input.previousElementSibling.style.display='none';
+
+     if((input.type === 'text'|| input.type ==='password') && input.value === ''){
+    
+      input.nextElementSibling.style.display = 'flex';
+      input.previousElementSibling.style.display='block';
+
+   }else if(input.type === 'email' && !input.value.includes('@' && '.')){
+    input.nextElementSibling.style.display = 'flex';
+         
+    }else{
+    input.nextElementSibling.style.display = 'none';
+
+    }
+    
   }
-  e.preventDefault();
-
-  console.log(warning1);
+      e.preventDefault();
+  
+  
+    
 }
-
-
-
-
-
-
-

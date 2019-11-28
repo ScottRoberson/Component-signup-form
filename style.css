@@ -115,13 +115,13 @@ input::focus {
   padding-right:10px;
 } */
 
-.label{
+label{
   display: none;
   position: relative;
 }
 
 
-.label::before{
+label::before{
   content:url("images/icon-error.svg");
   position: absolute;
   top:20px;
