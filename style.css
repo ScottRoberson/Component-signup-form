@@ -1,27 +1,22 @@
 body{
   background:url('images/bg-intro-desktop.png');
+  background-color:hsla(0, 100%, 74%,.90);
+  width:1500px;
   margin:0;
   padding:0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-.container{
-  position:fixed;
-  background-color:hsla(0, 100%, 74%,.65);
-  height:100vh;
-  width:100%;
-  
-}
-
-
 .main-wrapper{
-  width:1200px;
-  margin:0 auto;
-  height:600px;
-  display: flex;
-  align-items: center;
-  padding:15px;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-wrap:wrap;
+  padding:25px;
+   
 }
 .info {
   display: flex;
@@ -29,21 +24,45 @@ body{
   justify-content: center;
   padding: 25px;
   color: white;
-  flex:1; 
+  border:2px solid red;
+  margin:10px;
+  height:600px;
+  width:40%; 
+  
+}
+
+.info h1 {
+  margin:0;
+}
+
+.info p {
+  margin:0;
 }
 
 .signup {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  flex:1;
-  padding:20px;  
+  padding:20px;
+  border:2px dotted blue;
+  margin:10px;
+  height:600px;
+  width:40%;
+  
+  
+  
+  
 }
 
 footer {
-  margin: auto auto 0 auto;
-  display:flex;
-  justify-content: center;
+  min-width:100vw;
+  height:100px;
+  border:2px solid black;
+  
+}
+
+footer p {
+  text-align:center;
 }
 
 .offer {
@@ -96,6 +115,20 @@ input::focus {
   text-transform: uppercase;
 }
 
+/* Terms of Service */
+.terms{
+  font-size: 14px;
+  padding:10px;
+  color: hsl(246, 25%, 77%);
+  margin:10px 0px;
+}
+
+.terms-span{
+  color:hsl(0, 100%, 74%);
+  font-weight:bolder;
+  
+}
+
 /* Add class via JS */
 .warning{
   display: none;
@@ -106,14 +139,6 @@ input::focus {
   padding-right:10px;
 }
 
-/* .warning2{
-  display: none;
-  justify-content: flex-end;
-  margin:0;
-  font-size: 12px;
-  color:red;
-  padding-right:10px;
-} */
 
 label{
   display: none;
@@ -130,3 +155,57 @@ label::before{
 /* End of dynamic addition */
 
 
+/* Media Queries */
+
+
+
+ @media(max-width:1000px){ 
+
+  .main-wrapper{
+  width:90%;
+  height: 1000px;
+  padding:0;
+  
+}
+  
+  
+  .info{
+    width:40%;
+    /* flex:1 0 500px; */
+    height:150px;
+    padding:0;
+    margin:0;
+  }
+  .signup{
+    width: 55%;
+    height:500px;
+    
+
+  }
+  #signup-form{
+    padding: 10px 15px;
+    /* width:300px; */
+  }
+}
+
+@media(max-width:775px){  
+
+  .main-wrapper{
+  flex-direction: column;
+     
+}
+  
+  
+  .info{
+    flex:1;
+    width:75vw;
+  
+  }
+  .signup{
+    flex:1;
+    width:75vw;
+  }
+
+  } 
+
+  

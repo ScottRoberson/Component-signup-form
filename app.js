@@ -12,6 +12,8 @@ function checkForm(e){
   console.log(label)
 
   for(input of inputs){
+
+   
     input.nextElementSibling.style.display ='none';
     input.previousElementSibling.style.display='none';
 
